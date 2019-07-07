@@ -4,6 +4,7 @@ branches:
     - master
 jdk:
   - oraclejdk8
+dist: xenial
 addons:
   apt:
     packages:
