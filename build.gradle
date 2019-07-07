@@ -13,6 +13,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
+apply plugin: "kotlin"
+apply plugin: 'application'
+
+mainClassName = 'MainKt'
+
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
