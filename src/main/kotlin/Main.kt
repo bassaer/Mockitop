@@ -1,3 +1,4 @@
 fun main() {
-    println("hello")
+    val validator = Validator(2)
+    println(validator.validate("OK"))
 }
