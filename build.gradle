@@ -6,17 +6,26 @@ group 'com.github.bassaer'
 version '1.0-SNAPSHOT'
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testImplementation "org.mockito:mockito-core:2.+"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.5.0'
 }
 
 apply plugin: "kotlin"
 apply plugin: 'application'
 
 mainClassName = 'MainKt'
+
+test {
+    useJUnitPlatform {
+        includeEngines 'junit-jupiter'
+    }
+}
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
