@@ -1,3 +1,3 @@
-class Validator(private val length: Int = 0) {
-    fun validate(input: String) = input.length == length
+class Validator(private val limiter: Limiter) {
+    fun validate(input: String) = input.length < limiter.get()
 }
